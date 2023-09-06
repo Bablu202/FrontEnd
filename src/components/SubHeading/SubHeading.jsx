@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import images from "../../constants/images";
 
-const SubHeading = () => (
-  <div>
-    SubHeading
-  </div>
-);
-
-export default SubHeading;
+export default function SubHeading({ title }) {
+  return (
+    <div>
+      <p className="p__cormorant">{title}</p>
+      <img src={images.spoon} alt="spoon" className="spoon__img" />
+    </div>
+  );
+}

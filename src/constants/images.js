@@ -29,6 +29,7 @@ export default {
   gallery04,
   knife,
   logo,
+
   menu,
   overlaybg,
   spoon,

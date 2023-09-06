@@ -32,24 +32,7 @@ export default function Navbar() {
       <div className="app__navbar-logo">
         <img src={images.gericht} alt="app logo" />
       </div>
-      <ul className="app__navbar-links">
-        {" "}
-        <li className="p__opensans">
-          <a href="#home">Home</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#about">About</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#menu">Menu</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#awards">Awards</a>
-        </li>
-        <li className="p__opensans">
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      <ul className="app__navbar-links">{navListElements}</ul>
 
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans">
@@ -73,24 +56,7 @@ export default function Navbar() {
               className="overlay__close"
               onClick={() => setToggleMenu(false)}
             />
-            <ul className="app__navbar-smallscreen-links">
-              {" "}
-              <li className="p__opensans">
-                <a href="#home">Home</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#about">About</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#menu">Menu</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#awards">Awards</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
+            <ul className="app__navbar-smallscreen-links">{navListElements}</ul>
           </div>
         )}
       </div>
