@@ -5,3 +5,11 @@
   line-height: 116px;
   font-size: 90px;
 }
+@media screen and (max-width: 600px) {
+  .app__heading h1 {
+    font-size: 60px;
+  }
+  .app__heading p {
+    padding-top: 0;
+  }
+}
