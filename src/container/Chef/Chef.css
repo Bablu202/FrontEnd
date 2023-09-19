@@ -2,8 +2,7 @@
   display: flex;
 }
 .app__chef-image img {
-  width: 634px;
-  height: 789px;
+  width: 100%;
 }
 .app__chef-content {
   width: 100%;
@@ -50,7 +49,7 @@
 }
 @media screen and(max-width:900) {
   .app__chef-image img {
-    width: auto;
+    width: 100%;
   }
   .app__chef-sign img {
     width: 100%;
@@ -64,6 +63,6 @@
     width: auto;
   }
   .app__chef-sign img {
-    height: 25px;
+    width: 80%;
   }
 }
