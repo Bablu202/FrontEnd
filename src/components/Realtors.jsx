@@ -20,7 +20,7 @@ export default function Realtors() {
   ));
   return (
     <div className="realtors">
-      <h3 className="heading-2 heading-2--dark">Out top Realtors</h3>
+      <h3 className="heading-3 heading-3--dark">Our top Realtors</h3>
       {realtorsDataMap}
     </div>
   );

@@ -9,6 +9,10 @@ import Header from "./pages/Header";
 export default function RealEstate() {
   return (
     <body className="container">
+      {/*Side Bar*/}
+      <div className="sidebar">
+        <button className="nav-btn"></button>
+      </div>
       {/*HEADER*/}
       <Header />
       {/*FEATURES*/}

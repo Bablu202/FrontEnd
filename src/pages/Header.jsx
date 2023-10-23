@@ -10,10 +10,6 @@ import Realtors from "../components/Realtors";
 export default function Header() {
   return (
     <>
-      {/*Side Bar*/}
-      <div className="sidebar">
-        <button className="nav-btn"></button>
-      </div>
       <header className="header">
         <img src={logo} alt="logo" className="header__logo" />
         <div>
@@ -31,7 +27,7 @@ export default function Header() {
         </div>
       </header>
       {/*Realtors*/}
-      <Realtors />{" "}
+      <Realtors />
     </>
   );
 }

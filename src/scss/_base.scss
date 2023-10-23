@@ -14,6 +14,13 @@ $color-dark-2: #6d5d4b;
 $font-prime: "Proza Libre", sans-serif;
 $font-sec: "Noto Sans", sans-serif;
 $font-third: "Source Sans 3", sans-serif;
+
+//RESPONSIVE DESIGN
+$bp-1200px: 75em;
+$bp-1000px: 62.5em;
+$bp-800px: 50em;
+$bp-600px: 37.5em;
+
 *,
 *::before,
 *::after {
@@ -24,6 +31,10 @@ $font-third: "Source Sans 3", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; //to ger --10px = 1rem (normally browser default 16px = 1rem )
+
+  @media only screen and (max-width: $bp-1200px) {
+    font-size: 50%;
+  }
 }
 body {
   font-family: $font-prime;
@@ -37,8 +48,21 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
-    [sidebar-start] 8rem [sidebar-end full-start] minmax(2rem, 0.5fr)
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end]
-    minmax(2rem, 0.5fr) [full-end];
+    minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-1000px) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-800px) {
+    grid-template-rows: 4rem calc(100vh - 4rem);
+  }
 }

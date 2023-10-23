@@ -1,6 +1,7 @@
 .header {
   background-color: $color-prime-2;
   grid-column: full-start / col-end 6;
+
   background-image: linear-gradient(
       rgba($color-secondary, 0.93),
       rgba($color-secondary, 0.93)
@@ -12,10 +13,24 @@
   padding-top: 4rem;
 
   display: grid;
-  grid-template-rows: 1fr min-content 1fr 2rem min-content;
-  grid-template-columns: minmax(20rem, 1fr);
-  grid-row-gap: 1.8rem;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
   justify-content: left;
+
+  @media only screen and (max-width: $bp-800px) {
+    padding: 3rem;
+    padding-top: 2rem;
+    grid-row-gap: 0.95rem;
+
+    grid-column: 1 / -1;
+    grid-template-rows: 1fr 1fr minmax(10rem, max-content) 1fr;
+  }
+  @media only screen and (max-width: $bp-600px) {
+    padding: 2rem;
+    padding-top: 1rem;
+    grid-row-gap: 0.35rem;
+  }
 
   &__logo {
     justify-self: center;
@@ -27,10 +42,11 @@
     font-size: 1.6rem;
 
     display: grid;
+
     grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 1.6rem;
-    align-items: center;
+    align-items: end;
 
     //border-top: 1px solid $color-prime-2;
     &::after,
@@ -47,16 +63,14 @@
 
   &__seenon-logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
     justify-content: center;
-    //grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-    //justify-items: center;
-
-    //justify-content: space-between;
+    align-items: center;
 
     img {
-      height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
       opacity: 0.5;
     }
   }
